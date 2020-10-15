@@ -1,0 +1,8 @@
+.clients-logo {
+    display: flex;
+    align-items: center;
+}
+.clients-logo img {
+    width: 20%;
+    padding: 4%;
+}

@@ -1,0 +1,34 @@
+.UserSingleService {
+    background: white;
+    padding: 30px;
+    margin-bottom: 27px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #e3e3e3;
+    height: 89%;
+}
+
+.serviceListImage{
+    width: 90px;
+    height: 90px;
+    border-radius: 124px;
+}
+
+.serviceStatus-pending , .serviceStatus-ongoing,  .serviceStatus-done {
+    float: right;
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+
+}
+.serviceStatus-pending {
+    color: #FF4545;
+    background-color: #FFE3E3;
+}
+.serviceStatus-ongoing {
+    color: #e3a633;
+    background-color: #f3e2c2;
+}
+.serviceStatus-done{
+    color: #009444;
+    background-color: #C6FFE0;
+}

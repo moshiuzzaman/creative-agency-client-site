@@ -1,0 +1,36 @@
+.header-container {
+    background: #FBD062;
+    min-height: 688px;
+    position: relative;
+}
+.header-container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: white;
+    clip-path: polygon(100% 36%, 0% 100%, 100% 100%);
+}
+
+img.home-logo {
+    width: 125px;
+}
+.menu-link a {
+    padding: 10px 28px;
+    color: black;
+}
+.menu-link a:hover{
+    text-decoration: none;
+}
+.menu-link a:active{
+    font-weight: bold;
+}
+h1.bannerHeadding {
+    font-size: 48px;
+    font-weight: 700;
+}
+.banner-discription.col-md-5 {
+    padding-right: 7%;
+}

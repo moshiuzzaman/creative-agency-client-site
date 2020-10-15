@@ -1,0 +1,21 @@
+img.dashboard-logo {
+    width: 75%;
+}
+.sideBar {
+    background: white;
+    min-height: 100vh;
+    height: 100%;
+}
+.sideBar a {
+    display: block;
+    padding: 7px 0;
+    color: black;
+}
+.sideBar a:hover {
+    color: #009444;
+    text-decoration: none;
+}
+a.logoutBtn {
+    position: absolute;
+    bottom: 10px;
+}
