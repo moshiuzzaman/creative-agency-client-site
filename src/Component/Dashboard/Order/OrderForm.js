@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 
 const OrderForm = ({ userAndService }) => {
     const [spiner, setSpinner] = useState(false)
-    const { register, handleSubmit, errors } = useForm();
+    const { register, handleSubmit } = useForm();
     const onSubmit = (data, e) => {
         setSpinner(true);
         const orderedData = {
