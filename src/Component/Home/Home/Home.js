@@ -11,13 +11,13 @@ import './Home.css'
 const Home = () => {
     return (
         <div className='home-container'>
-            <Header/>
-            <ClientsLogo/>
-            <Services/>
-            <Works/>
-            <Testmonial/>
-            <Contact/>
-            <Footer/>
+            <Header />
+            <ClientsLogo />
+            <Services />
+            <Works />
+            <Testmonial />
+            <Contact />
+            <Footer />
         </div>
     );
 };

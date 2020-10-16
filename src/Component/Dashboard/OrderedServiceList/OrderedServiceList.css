@@ -1,0 +1,49 @@
+.serviceListTable {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+.serviceListTable thead {
+    background: #F5F6FA;
+}
+.statusButton-pending.dropdown.btn-group button {
+    background: none;
+    color: #FF4545;
+    border: none;
+}
+.statusButton-ongoing.dropdown.btn-group button {
+    background: none;
+    color: #FFBD3E;
+    border: none;
+}
+.statusButton-done.dropdown.btn-group button {
+    background: none;
+    color: #009444;
+    border: none;
+}
+
+.dropdown-toggle::after {
+    margin-top: 16px;
+    font-size: 26px;
+}
+.pending-dropdownItem {
+    color: #FF4545 !important;
+    background-color: #FFE3E3 !important;
+}
+.ongoing-dropdownItem {
+    color: #e3a633 !important; 
+    background-color: #f3e2c2 !important;
+}
+.done-dropdownItem {
+    color: #009444 !important;
+    background-color: #C6FFE0 !important;
+}
+.btn.focus, .btn:focus{
+    box-shadow: none !important;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+    background: none !important;
+}
+.statusButton-done.dropdown.btn-group {
+    float: right;
+}

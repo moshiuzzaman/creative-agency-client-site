@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .dashboard-title h5 {
   float: right;
+  margin-top: 5px;
 }
 .dashboard-title.row {
   background: white;
@@ -60,4 +61,12 @@ button.Button-admin-form.btn.btn-primary {
   margin-top: 32px;
   background: #009444;
   padding: 8px 40px;
+}
+
+img.dashboard-user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin-left: 20px;
+  margin-top: -11px;
 }

@@ -9,8 +9,7 @@ const SingleService = ({ service }) => {
     const [allData, setAllData] = useContext(UserContext)
     const handleServiceOrder = () => {
         const newData = { ...allData, service };
-        setAllData(newData)
-        console.log(allData);
+        setAllData(newData);
     }
     return (
         <Col md={4} sm={6}>

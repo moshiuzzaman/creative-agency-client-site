@@ -8,7 +8,7 @@ const Contact = () => {
                 <Row>
                     <Col md={6}>
                         <h2>Let us handle your project, professionally.</h2>
-                        <p  className='mt-4'>With well written codes, we build amazing apps for all <br/>platforms, mobile and web apps in general.</p>
+                        <p className='mt-4'>With well written codes, we build amazing apps for all <br />platforms, mobile and web apps in general.</p>
                     </Col>
                     <Col md={6}>
                         <Form>

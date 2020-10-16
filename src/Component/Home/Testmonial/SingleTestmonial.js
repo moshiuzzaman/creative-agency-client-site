@@ -3,7 +3,7 @@ import { Col } from 'react-bootstrap';
 
 const SingleTestmonial = ({ review }) => {
     const { name, img, CompanyName, Description } = review
-    
+
     return (
         <Col md={4}>
             <div className="singleTestmonial border border-dark my-3 py-3 pl-3 pr-1">

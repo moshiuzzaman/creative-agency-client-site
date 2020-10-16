@@ -4,11 +4,10 @@ import { Button, Col, Form, Row, Spinner } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 
 const OrderForm = ({ userAndService }) => {
-    const [spiner, setSpinner] =useState(false)
+    const [spiner, setSpinner] = useState(false)
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = (data, e) => {
-        setSpinner(true)
-        console.log(userAndService.service);
+        setSpinner(true);
         const orderedData = {
             ...data,
             icon: userAndService.service.image,
@@ -28,7 +27,7 @@ const OrderForm = ({ userAndService }) => {
                     setSpinner(false)
                     alert('Orderd Successful')
                     e.target.reset();
-                    
+
                 }
             })
     };
@@ -36,28 +35,25 @@ const OrderForm = ({ userAndService }) => {
         <div>
             <Row>
                 <Col md={6}>
-
                     <Form onSubmit={handleSubmit(onSubmit)}>
                         <Form.Control size="lg" type="text" name='name' defaultValue={userAndService.user.displayName} placeholder="Your name / company’s name" ref={register({ required: true })} />
                         <Form.Control size="lg" type="email" name='orderdEmail' defaultValue={userAndService.user.email} placeholder="Enter email" ref={register({ required: true, pattern: /^\S+@\S+$/i })} />
                         <Form.Control size="lg" type="text" name='serviceName' defaultValue={userAndService.service.title} placeholder="Graphic Design" ref={register({ required: true })} />
                         <Form.Control size="lg" name='ProjectDetails' placeholder="Project Details" as="textarea" rows="3" ref={register({ required: true })} />
                         <Form.Control size="lg" type="text" name='Price' placeholder="Price" ref={register({ required: true })} />
-
-                        <Button className="Button-style" type="submit"> 
-                        {
-                            spiner ? <><Spinner
-                            as="span"
-                            animation="grow"
-                            size="sm"
-                            role="status"
-                            aria-hidden="true"
-                        />
-                    Loading...</> : 'Send' 
-                        } 
+                        <Button className="Button-style" type="submit">
+                            {
+                                spiner ? <><Spinner
+                                    as="span"
+                                    animation="grow"
+                                    size="sm"
+                                    role="status"
+                                    aria-hidden="true"
+                                />
+                    Loading...</> : 'Send'
+                            }
                         </Button>
                     </Form>
-
                 </Col>
             </Row>
         </div>

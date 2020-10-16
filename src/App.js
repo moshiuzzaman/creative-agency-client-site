@@ -11,12 +11,13 @@ import Login from './Component/Login/Login';
 import UserServiceList from './Component/Dashboard/UserServiceList/UserServiceList';
 import Order from './Component/Dashboard/Order/Order';
 import Review from './Component/Dashboard/Review/Review';
-import AdminServiceList from './Component/Dashboard/AdminServiceList/AdminServiceList';
+import OrderedServiceList from './Component/Dashboard/OrderedServiceList/OrderedServiceList';
 import AddService from './Component/Dashboard/AddService/AddService';
 import MakeAdmin from './Component/Dashboard/MakeAdmin/MakeAdmin';
 import { createContext } from 'react';
 import { useState } from 'react';
 import PrivetRoute from './Component/Login/PrivetRoute';
+import ServicesList from './Component/Dashboard/ServicesList/ServicesList';
 
 
 
@@ -43,14 +44,17 @@ function App() {
           <PrivetRoute path="/Review">
             <Review />
           </PrivetRoute>
-          <PrivetRoute path="/AdminServiceList">
-            <AdminServiceList />
+          <PrivetRoute path="/OrderedServiceList">
+            <OrderedServiceList />
           </PrivetRoute>
           <PrivetRoute path="/AddService">
             <AddService />
           </PrivetRoute>
           <PrivetRoute path="/MakeAdmin">
             <MakeAdmin />
+          </PrivetRoute>
+          <PrivetRoute path="/ServicesList">
+            <ServicesList />
           </PrivetRoute>
           <Route exact path="/">
             <Home />

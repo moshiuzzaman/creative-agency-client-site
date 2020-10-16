@@ -11,11 +11,10 @@ const HeaderBanner = () => {
                     <Button className='Button-style'>Hire Us</Button>
                 </Col>
                 <Col md={7} sm={6} className=''>
-                    <img  src={'https://i.ibb.co/JQ2Y29T/Frame-min.png'} alt="" className="bannerImage w-100 "/>
+                    <img src={'https://i.ibb.co/JQ2Y29T/Frame-min.png'} alt="" className="bannerImage w-100 " />
                 </Col>
 
             </Row>
-
         </Container>
     );
 };

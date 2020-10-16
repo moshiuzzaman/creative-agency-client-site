@@ -2,8 +2,7 @@ import React from 'react';
 import { Col } from 'react-bootstrap';
 
 const SingleUserServiceList = ({orderdService}) => {
-    const { serviceName, details, icon,status } = orderdService
-    console.log(orderdService);
+    const { serviceName, details, icon,status } = orderdService;
     return (
         <Col md={5}>
             <div className="UserSingleService">

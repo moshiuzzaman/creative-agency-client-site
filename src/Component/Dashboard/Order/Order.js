@@ -8,24 +8,20 @@ import OrderForm from './OrderForm';
 
 const Order = () => {
     const admin = JSON.parse(sessionStorage.getItem('admin'))
-    const history=useHistory()
-    if(admin.admin){
-        history.push('/AdminServiceList')
+    const history = useHistory()
+    if (admin.admin) {
+        history.push('/OrderedServiceList')
         alert('admin cannot order a service')
     }
-
-    const user=JSON.parse(sessionStorage.getItem('user'))
-    let userAndService={
-        service:{
+    const user = JSON.parse(sessionStorage.getItem('user'))
+    let userAndService = {
+        service: {
             title: ''
         }
-
     }
-    const [allData,setAllData]=useContext(UserContext)
-
-    userAndService = {...userAndService,...allData,user}
+    const [allData] = useContext(UserContext)
+    userAndService = { ...userAndService, ...allData, user }
     return (
-        
         <div className="dashboard-section">
             <Row className='w-100'>
                 <Col className='m-0 p-0' sm={4} md={2}>
@@ -36,12 +32,13 @@ const Order = () => {
                         <Col sm={6} md={6}>
                             <h3 >Order</h3>
                         </Col>
-                        <Col sm={6} md={6}>
+                        <Col sm={6} md={6} className="d-flex" >
                             <h5 className='ml-auto'>{user.displayName}</h5>
+                            <img className='dashboard-user-image' src={user.photoURL} alt="" />
                         </Col>
                     </Row>
                     <div className="m-4">
-                        <OrderForm userAndService={userAndService}/>
+                        <OrderForm userAndService={userAndService} />
                     </div>
                 </Col>
             </Row>

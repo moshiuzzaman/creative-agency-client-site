@@ -8,9 +8,9 @@ import './UserServiceList.css'
 
 const UserServiceList = () => {
     const admin = JSON.parse(sessionStorage.getItem('admin'))
-    const history=useHistory()
-    if(admin.admin){
-        history.push('/AdminServiceList')
+    const history = useHistory()
+    if (admin.admin) {
+        history.push('/OrderedServiceList')
         alert('admin cannot Access user Servise list page , You please check your Service List for see Orderd Service')
     }
     const user = JSON.parse(sessionStorage.getItem('user'))
@@ -21,7 +21,6 @@ const UserServiceList = () => {
             .then(response => response.json())
             .then(data => {
                 setOrderdServices(data)
-                console.log('data found');
             })
     }, [])
 
@@ -36,8 +35,9 @@ const UserServiceList = () => {
                         <Col sm={6} md={6}>
                             <h3 >Service List</h3>
                         </Col>
-                        <Col sm={6} md={6}>
+                        <Col sm={6} md={6} className="d-flex" >
                             <h5 className='ml-auto'>{user.displayName}</h5>
+                            <img className='dashboard-user-image' src={user.photoURL} alt="" />
                         </Col>
                     </Row>
                     <div className="m-4">

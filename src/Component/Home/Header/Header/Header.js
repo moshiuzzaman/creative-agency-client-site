@@ -5,8 +5,8 @@ import './Header.css'
 const Header = () => {
     return (
         <div className='header-container'>
-            <MenuBar/>
-            <HeaderBanner/>
+            <MenuBar />
+            <HeaderBanner />
         </div>
     );
 };

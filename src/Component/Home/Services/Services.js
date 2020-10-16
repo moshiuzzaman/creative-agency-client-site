@@ -17,12 +17,9 @@ const Services = () => {
             <h2 className=" py-5"> Provide awesome <span className="text-success">services</span></h2>
             <Row className='justify-content-center'>
                 {
-                    services.length === 0 ? <Spinner className="mb-5  p-4" animation="border" /> :  
-                    services.map(s => <SingleService key={s._id} service={s} />)
+                    services.length === 0 ? <Spinner className="mb-5  p-4" animation="border" /> :
+                        services.map(s => <SingleService key={s._id} service={s} />)
                 }
-                
-                
-              
             </Row>
         </Container>
     );

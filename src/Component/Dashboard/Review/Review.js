@@ -6,14 +6,13 @@ import ReviewForm from './ReviewForm';
 
 const Review = () => {
     const admin = JSON.parse(sessionStorage.getItem('admin'))
-    const history=useHistory()
-    if(admin.admin){
-        history.push('/AdminServiceList')
+    const history = useHistory()
+    if (admin.admin) {
+        history.push('/OrderedServiceList')
         alert('admin cannot write a review')
     }
     const user = JSON.parse(sessionStorage.getItem('user'))
     return (
-        
         <div className="dashboard-section">
             <Row className='w-100'>
                 <Col className='m-0 p-0' sm={4} md={2}>
@@ -24,12 +23,13 @@ const Review = () => {
                         <Col sm={6} md={6}>
                             <h3 >Review</h3>
                         </Col>
-                        <Col sm={6} md={6}>
+                        <Col sm={6} md={6} className="d-flex" >
                             <h5 className='ml-auto'>{user.displayName}</h5>
+                            <img className='dashboard-user-image' src={user.photoURL} alt="" />
                         </Col>
                     </Row>
                     <div className="m-4">
-                        <ReviewForm user={user}/>
+                        <ReviewForm user={user} />
                     </div>
                 </Col>
             </Row>

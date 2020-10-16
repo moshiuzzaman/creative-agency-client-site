@@ -5,8 +5,8 @@ import './Testmonial.css'
 
 const Testmonial = () => {
     const [reviews, setReview] = useState([])
-    const reviewReverse =reviews.reverse()
-    const getNew6Review= reviews.slice(0,6)
+    const getNew6Review = reviews.slice(Math.max(reviews.length - 6, 0))
+    const reviewReverse = getNew6Review.reverse()
 
     useEffect(() => {
         fetch('https://obscure-temple-62164.herokuapp.com/reviews')
@@ -19,7 +19,7 @@ const Testmonial = () => {
             <Row className='pb-5 mb-5 mb-sm-0 justify-content-center'>
                 {
                     reviews.length === 0 ? <Spinner className="mb-5  p-4" animation="border" /> :
-                    getNew6Review.map(rv => <SingleTestmonial review={rv} key={rv._id} />)
+                        reviewReverse.map(rv => <SingleTestmonial review={rv} key={rv._id} />)
                 }
             </Row>
         </Container>

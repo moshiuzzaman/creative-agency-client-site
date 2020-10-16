@@ -1,0 +1,18 @@
+
+.SingleService {
+    background: white;
+    padding: 30px;
+    margin-bottom: 27px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #e3e3e3;
+    height: 89%;
+}
+
+.serviceImage{
+    width: 90px;
+    height: 90px;
+    border-radius: 124px;
+}
+button.service-delete-button.btn.btn-danger {
+    float: right;
+}
